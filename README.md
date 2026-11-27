@@ -1,7 +1,7 @@
 ReturnDesk — returns desk for a small online store
 Agents create and manage return / replacement requests against orders, review them, approve them with a Refund, Replacement or Store Credit resolution (or reject them), add append-only notes, and close them out. Every business rule is enforced on the server against PostgreSQL — the browser UI is a convenience, never the authority.
 
-Live Demo: ReturnDesk — Try the live application — live on Vercel with the Supabase PostgreSQL database attached and the seed data loaded, verified end-to-end against the production API on 27 Nov 2026 (see “Deployment status”). When this repo is published to GitHub, put the same URL in the repository description.
+Deployed URL:**https://returndesk-0ji8.arcada.app/ **— live on Vercel with the Supabase PostgreSQL database attached and the seed data loaded, verified end-to-end against the production API on 27 Nov 2026 (see “Deployment status”). When this repo is published to GitHub, put the same URL in the repository description.
 Stack — and one honest deviation
 The assignment mandates Next.js App Router. The build environment used for this submission provides Vite + React 19 + TypeScript, Vercel serverless functions (Node.js) for the backend, and Supabase PostgreSQL — there is no Next.js runtime available in it. Rather than claiming Next.js, this implementation was built on the equivalent architecture and the deviation is documented here and in the app’s own Docs page:
 Concern	Assignment	This build
@@ -138,9 +138,5 @@ Extra work beyond the letter of the brief
 Time spent
 Built in a single AI-assisted session on 27 November 2026 — roughly 3–4 hours of wall-clock build-and-verify time, not a human 24-hour effort, and not presented as one. (As a planning reference only, the same scope estimated for an unaided human build was ~14–18 hours; that estimate is not time that was spent.)
 Deployment status — only what actually happened
-- Application + database: deployed to Vercel on 27 Nov 2026 with the Supabase Postgres database attached and the seed data loaded (33 requests: Open 9, In Review 7, Approved 6, Rejected 5, Completed 6). Live application: https://returndesk-0ji8.arcada.app — it belongs in the GitHub repository description when the repo is published. One environment caveat, stated for accuracy: the hosted demo database was seeded with the identical dataset as scripts/seed.mjs but loaded through the platform’s data tooling, because this sandbox does not expose the service-role key to a local shell; the script itself is the documented clean-machine path (node --env-file=.env scripts/seed.mjs) and is plain supabase-js inserts against the documented env vars.
-- GitHub repository: not published by this builder (no credentials in the environment). To publish with the progressive history intact:git remote add origin git@github.com:<you>/returndesk.git
-  git push -u origin main
-  # then set the repository description to the deployed URL
-- Commits: made progressively in the local history (schema/seed → API → UI → docs → deployment record) rather than as one dump; git log --oneline shows the sequence.
-This is a standalone take-home build; it is not a Frido project and uses no Frido code or data.
+- Application + database: deployed to Vercel on 27 Nov 2026 with the Supabase Postgres database attached and the seed data loaded (33 requests: Open 9, In Review 7, Approved 6, Rejected 5, Completed 6). Production URL: https://ski5xd.vercel.app — it belongs in the GitHub repository description when the repo is published. One environment caveat, stated for accuracy: the hosted demo database was seeded with the identical dataset as scripts/seed.mjs but loaded through the platform’s data tooling, because this sandbox does not expose the service-role key to a local shell; the script itself is the documented clean-machine path (node --env-file=.env scripts/seed.mjs) and is plain supabase-js inserts against the documented env vars.
+- GitHub repository: not published by this builder (no credentials in the environment). To publish with the progressive history intact:
